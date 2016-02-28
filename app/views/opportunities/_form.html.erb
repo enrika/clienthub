@@ -20,6 +20,14 @@
 </p>
 
 <p>
+<%= f.label :amount %>
+<%= f.select :amount,
+			 Opportunity::AMOUNT_OPTIONS,
+			 promt: "Pick one" %>
+</p>
+
+
+<p>
 <%= f.label :phone %>
 <%= f.text_field :phone %>
 </p>
@@ -27,7 +35,7 @@
 
 
 <p>
-<%= f.label :image %>
+<%= f.label "Image URL" %>
 <%= f.text_field :image %>
 </p>
 

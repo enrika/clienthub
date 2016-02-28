@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :notes
-  resources :opportunities
-
+  
+  root "opportunities#index"
+  resources :opportunities do
+  	resources :notes
+end
   resources :proposals
 end

@@ -31,7 +31,11 @@ class OpportunitiesController < ApplicationController
 		@opp = Opportunity.new(opp_params)
 		@opp.save
 
-		redirect_to @opp
+		if @opp.save
+		redirect_to @opp, notice: "Opportunity was successfully created"
+		else
+			render "new"
+		end
 	end
 
 	def destroy
