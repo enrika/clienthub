@@ -23,6 +23,7 @@ class OpportunitiesController < ApplicationController
 
 	
 	def new
+		fail
 		@opp = Opportunity.new
 	end
 

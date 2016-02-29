@@ -26,6 +26,20 @@
 			 promt: "Pick one" %>
 </p>
 
+<p>
+<%= f.label :phase %>
+<%= f.select :phase,
+			 Opportunity::PHASE_OPTIONS,
+			 promt: "Pick one" %>
+</p>
+
+<p>
+<%= f.label :engagement_level %>
+<%= f.select :engagement_level,
+			 Opportunity::ENGAGE_LEVELS,
+			 promt: "Pick one" %>
+</p>
+
 
 <p>
 <%= f.label :phone %>
@@ -45,6 +59,7 @@
 <%= f.label :company %>
 <%= f.text_field :company %>
 </p>
+
 
 
 <%= f.submit %>

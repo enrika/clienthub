@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160228053635) do
+ActiveRecord::Schema.define(version: 20160229064012) do
+
+  create_table "actions", force: :cascade do |t|
+    t.string   "name"
+    t.date     "due_date"
+    t.boolean  "next"
+    t.boolean  "completed"
+    t.integer  "opportunity_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "actions", ["opportunity_id"], name: "index_actions_on_opportunity_id"
+
+  create_table "needs", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "solution"
+    t.integer  "opportunity_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "needs", ["opportunity_id"], name: "index_needs_on_opportunity_id"
 
   create_table "notes", force: :cascade do |t|
     t.string   "title"
@@ -33,9 +56,11 @@ ActiveRecord::Schema.define(version: 20160228053635) do
     t.string   "phone"
     t.string   "email"
     t.string   "amount"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "image"
+    t.string   "phase"
+    t.string   "engagement_level"
   end
 
 end
