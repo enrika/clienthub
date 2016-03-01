@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229064012) do
+ActiveRecord::Schema.define(version: 20160229081009) do
 
   create_table "actions", force: :cascade do |t|
     t.string   "name"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160229064012) do
     t.string   "image"
     t.string   "phase"
     t.string   "engagement_level"
+    t.string   "website"
   end
 
 end

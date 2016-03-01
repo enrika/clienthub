@@ -7,6 +7,7 @@ class OpportunitiesController < ApplicationController
 	
 	def show #details view
 		@opp = Opportunity.find(params[:id])
+		@notes = @opp.notes.limit(3)
 	end
 
 	
@@ -23,7 +24,6 @@ class OpportunitiesController < ApplicationController
 
 	
 	def new
-		fail
 		@opp = Opportunity.new
 	end
 
@@ -56,7 +56,7 @@ class OpportunitiesController < ApplicationController
 
 		def opp_params 
 			params.require(:opportunity).
-			permit(:name, :twitter, :fb, :prospect_name, :company, :phone, :email, :amount, :image)
+			permit(:name, :twitter, :fb, :prospect_name, :phase, :engagement_level, :company, :phone, :email, :amount, :image, :website)
 		end
 
 	
