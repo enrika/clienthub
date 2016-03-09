@@ -31,7 +31,8 @@ Needs Help with:
 	<h3><%= note.title %></h3>
 	<% end %>
 
-<div>
+<div class="note note-info">                     
+                            
 	<%= link_to('Edit', edit_opportunity_path) %>
 
 	<%= link_to "Delete", opportunity_path(@opp), method: :delete, data: {confirm: "Hey ya sure you want to do this?!"} %>
