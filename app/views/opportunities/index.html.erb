@@ -1,6 +1,76 @@
 <h1>Active Opportunities:</h1><h4><%= link_to "Add An Opportunity", new_opportunity_path %></h4>
+
+
+<div class= "container">
+			<div class= "topbar"></div>
+
 <ul>
-<%@opps.each do |opp| %>
-<li></h2><%= link_to(opp.name.titleize, opp) %></h2></li>
-<% end %>
+			
+
+	<%@opps.each do |opp| %>
+		
+
+
+			<li class="row">
+				
+				
+				<div class="line engage">
+					<div class= "engagement-level  <%= opp.engagement_level %>" ><i class="eicon fa fa-heart"></i></i></div>
+				</div>
+
+				<div class="phaseline line">
+					 <div class= "phase <%= opp.phase.downcase %>" > <%= opp.phase %></div>
+				</div>
+
+				<div class="column">
+					<div class="line">
+
+							<%= image_tag(opp.image, class: "profile_pic")%>
+							<!-- <img class= "profile_pic" src="../app/assets/images/profile_user.jpg"> -->   
+					</div>
+
+					<div class="line">
+						<div class= "info item">
+								<h2 class="company"><%= link_to(opp.name.titleize, opp) %></h2>
+								<h3 class="name"><%= opp.prospect_name %></h3>
+								<h4 class="owner">Owner</h4>
+								<p class="phone"> 
+									661-999-9999 <a class= "mail" href ="mailto: yamamam@yamam.com"><i class="fa fa-envelope"></i></a>
+								</p>
+								<div class="notes">
+								<a href="<%= opp.website %>"><i class="fa fa-rss-square"></i></a>
+								<a href="<%= opp.twitter %>" target="_blank"><i class="fa fa-twitter-square"></i></a>
+								<a href="<%= opp.fb %>" target="_blank"><i class="fa fa-facebook-square"></i></i></a>
+								<!-- <a href=""><i class="icon-share-alt icons"></i></a>
+								<a href=""><i class="icon-note icons"></i></a> -->
+								
+
+								</div>
+						</div>	
+					</div>
+				</div>
+			
+				<div class="line">	
+					<div class= "action">
+						<p class= "next-action">
+							<span class="highlighter">Next Action: </span>Next Action goes here
+						</p>
+						<div class="line action-date">
+							03/16/16
+						</div>
+
+						<p class = "primary-challenge">
+							<span class="highlighter">Confirmed: </span><%= truncate("They need a website that allows customers to order online, plus share testimonials", length: 37) %>
+						</p>
+					</div>
+				</div>
+
+				
+			
+			</li>
+
+	<% end %>
+</ul>
+
+	</div>
 

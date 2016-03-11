@@ -15,10 +15,12 @@
     <!-- END HEAD -->
 
     <body class="page-container-bg-solid page-boxed">
-   <%= render "layouts/header" %>
+    <div class="big_container">
+   
 <!-- main container with all dynamic content -->
-<%= render "layouts/container" %>
+<%= yield %>
+<%= render 'layouts/footer' %>
+</div>
 
- <%= render "layouts/footer" %>
 </body>
 </html>

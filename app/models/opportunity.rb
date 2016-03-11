@@ -27,7 +27,7 @@ PHASE_OPTIONS = [
 
 'Research',
 'Engagement',
-'Needs Discovered',
+'Need',
 'Intake',
 'Proposal'
 
