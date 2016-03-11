@@ -1,0 +1,352 @@
+
+/****************************************
+			
+			BASE STYLES
+
+****************************************/
+
+body {
+	font-size: 1.25em;
+	font-family: 'Open Sans', sans-serif;
+	color: #7C8A9B;
+	background: #e8e9e9;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+
+.footer {
+	width: 100%;
+	min-height: 90px;
+	background-color: #67BCE8;
+
+	}
+
+.line , 
+ul, 
+li.row,
+ .container,
+ .column
+
+{
+	display: flex;
+	
+}
+
+
+
+
+/**********   CONTAINERS  ***********/
+
+
+
+/*Main container for all opportunites*/
+.container 
+
+{
+
+	background-color: white;
+	flex-direction: column;
+	
+}
+
+.topbar {
+	height: 60px;
+	flex-grow: 1;
+	color: #000;	
+	background-color: #36d7b7;
+
+}
+
+
+
+
+
+
+/**********   ROWS  ***********/
+
+
+
+
+/* main ul list holds all opportunity content after the topbar header- will display its child items vertically*/
+ul {
+	flex-direction: column;
+}
+
+
+
+/* each row is a li item container that holds all info for each opportunity- it also will 
+display its child items (lines) vertically - each row will be repeated via an each loop- with a bottom border to seperate each opp*/
+
+li.row  {
+
+	border-bottom: #f1f1f1 1px solid;
+	padding-right: 5%;
+	padding-left: 5%;
+	flex-direction: column;
+	
+}
+
+/*differnt shades for each row  */
+
+.row:nth-child(2) {
+
+background-color: #f8f8f8;
+
+}
+
+/* each line reps a row of content that needs to line up side by side */
+
+.line {
+	flex-direction: row;
+	flex-grow: 1;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	
+
+}
+
+/**********      Column Styling     ***********/
+
+.column {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+/**********      Individual ELEMENTS Styling     ***********/
+
+/* 
+COLORS 
+  #50E3C2
+  #7EDDC8
+  #67BCE8 true blue
+  #FBC266
+  #FE8484
+  #FFA672 orange  
+  */
+
+
+
+.phase {
+
+	padding: 5px;
+	border-radius: 10px;
+	color: #fff; 
+	font-size: .65em;
+	margin-top: 10px;
+	max-height: 17px;
+}
+
+.research {
+
+	background-color: #FFA672;
+	padding: 5px;
+	border-radius: 10px;
+	color: #fff; 
+	font-size: .65em;
+	margin-top: 10px;
+	max-height: 17px;
+}
+
+.engagement {
+	background-color: #FBC266;
+	}
+
+
+.assesment {
+	background-color: #FFA672;
+	
+}
+
+
+
+.intake {
+  
+  	background-color: #67BCE8;
+	
+}
+
+.proposal {
+	background-color:  #FE8484;
+	
+}
+
+.need {
+	background-color:  #7EDDC8;
+}
+
+
+.phaseline.line {
+    margin-top: -30px;
+}
+
+.engagement-level {
+
+	font-family: 'simple-line-icons';
+	margin-left: auto;
+
+}
+
+.icons {
+
+	font-family: 'simple-line-icons';
+
+}
+
+i.fa.fa-twitter-square {
+    color: rgba(103,188,232,0.62);
+}
+
+i.fa.fa-facebook-square {
+    color: rgba(79, 119, 181, 0.67);
+}
+
+
+i.fa.fa-rss-square {
+    color: rgba(251, 194, 102, 0.86);
+}
+
+.eicon {
+
+	background-color: rgba(124, 138, 155, 0.10);
+	padding: 5px;
+}
+
+.notes {
+	font-size: 1.7em;
+	margin-top: -15px;
+
+}
+
+
+.info {
+color:rgba(124, 138, 155, 0.60);
+font-size: .6em;
+font-weight: 200;
+}
+
+.company {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 32px;
+    font-size: 2.3em;
+    font-weight: 400;
+    color: #7C8A9B;
+    
+}
+
+.name {
+	font-size: 1.4em;
+	margin-top: 5px;
+	font-weight: 500;
+}
+
+.phone {
+	font-size: 1.3em;
+    margin-top: 2px;
+}
+
+.mail:hover {
+	color: #67BCE8;
+
+}
+
+.action {
+color: #7C8A9B;
+font-size: .7em;
+}
+
+.hot {
+	color: #FC8181;
+}
+
+
+
+.profile_pic {
+    border-radius: 50%!important;
+    max-width: 120px;
+    max-height: 120px;
+}
+
+
+.highlighter {
+
+	color: #59D0E6;
+	font-size: 1.15em;
+	background-color: rgba(124, 138, 155, 0.12);
+	padding: 0 5px 0 8px;
+	margin-right: 3px;
+}
+
+.action-date {
+	margin-left: 10px;
+	margin-top: -15px;
+}
+
+.primary-challenge {
+	display: none;
+}
+
+/****************************************
+			
+			MOBILE STYLES
+
+****************************************/
+
+@media (min-width: 800px) {
+
+li.row {
+	flex-direction: row;
+}
+
+
+.line {
+	align-items: center;
+}
+
+
+
+.line.engage {
+    order: 6;
+}
+
+
+.column {
+    padding-left: 3px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.profile_pic {
+	    margin-right: 40px;
+}
+
+.info {
+	    margin-top: 15px;
+}
+
+.primary-challenge {
+	display: inline;
+}
+
+.highlighter {
+	font-size: .95em;
+}
+
+.notes {
+ margin-bottom: 15px; 
+}
+}
+  
+
+@media (min-width: 1200px) {
+
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+}
+
+
