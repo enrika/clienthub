@@ -1,8 +1,5 @@
-<h1>Active Opportunities:</h1><h4><%= link_to "Add An Opportunity", new_opportunity_path %></h4>
 
-
-<div class= "container">
-			<div class= "topbar"></div>
+<div class= "container stretch">
 
 <ul>
 			
@@ -15,12 +12,28 @@
 				
 				
 				<div class="line engage">
+					<%= link_to edit_opportunity_path(opp) do %>
+	  					<div class="edit line"> <i class="icon-note icons"></i></div>
+					<% end %>
+					
 					<div class= "engagement-level  <%= opp.engagement_level %>" ><i class="eicon fa fa-heart"></i></i></div>
+
+
 				</div>
 
+
+				
+
+
 				<div class="phaseline line">
+					 
 					 <div class= "phase <%= opp.phase.downcase %>" > <%= opp.phase %></div>
+					 
+					
 				</div>
+
+
+
 
 				<div class="column">
 					<div class="line">
@@ -41,8 +54,7 @@
 								<a href="<%= opp.website %>"><i class="fa fa-rss-square"></i></a>
 								<a href="<%= opp.twitter %>" target="_blank"><i class="fa fa-twitter-square"></i></a>
 								<a href="<%= opp.fb %>" target="_blank"><i class="fa fa-facebook-square"></i></i></a>
-								<!-- <a href=""><i class="icon-share-alt icons"></i></a>
-								<a href=""><i class="icon-note icons"></i></a> -->
+								
 								
 
 								</div>
@@ -72,5 +84,7 @@
 	<% end %>
 </ul>
 
-	</div>
+</div>
+
+
 

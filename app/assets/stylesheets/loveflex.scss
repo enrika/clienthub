@@ -1,4 +1,30 @@
 
+/* 
+COLORS 
+  #50E3C2 greengreen
+  #67BCE8 true blue
+  #FBC266 faded orange
+  #FE8484 faded red
+  #FFA672 orange 
+  #4FD7E4 primary sz blue
+  #36d7b7 bright green
+
+  */
+
+  $brand-color1: #4FD7E4;
+  $brand-color2: #f1f1f1;
+  $primary-color: #36d7b7;
+  $main-neutral: #e8e9e9;
+  $table-grey: #f8f8f8;
+  $faded-red: #FE8484;
+  $faded-orange: #FBC266;
+  $true-blue:  #67BCE8;
+  $text-color: #7C8A9B;
+  $sz-color-dark: #4fd7e4;
+
+
+
+
 /****************************************
 			
 			BASE STYLES
@@ -8,8 +34,8 @@
 body {
 	font-size: 1.25em;
 	font-family: 'Open Sans', sans-serif;
-	color: #7C8A9B;
-	background: #e8e9e9;
+	color: $text-color;
+	background: $main-neutral;
 	padding-left: 5%;
 	padding-right: 5%;
 }
@@ -18,22 +44,28 @@ body {
 .footer {
 	width: 100%;
 	min-height: 90px;
-	background-color: #67BCE8;
+	background-color: $brand-color1;
 
 	}
 
-.line , 
+.line, 
 ul, 
 li.row,
  .container,
- .column
+ .column,
+ .menubar,
+ .addbtn
 
 {
 	display: flex;
 	
 }
 
-
+a.logo img {
+    max-width: 80px;
+    /* max-height: 120px; */
+    margin: 20px 20px 20px 40px;
+}
 
 
 /**********   CONTAINERS  ***********/
@@ -41,20 +73,36 @@ li.row,
 
 
 /*Main container for all opportunites*/
+
+.big_container {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
 .container 
 
 {
 
 	background-color: white;
 	flex-direction: column;
+	padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+   	padding-top: 3%;
+
+			&.stretch{
+				padding: 0;
+			}
+			
 	
 }
 
 .topbar {
-	height: 60px;
+	height: 120px;
 	flex-grow: 1;
 	color: #000;	
-	background-color: #36d7b7;
+	background-color: $sz-color-dark;
+	
 
 }
 
@@ -91,7 +139,7 @@ li.row  {
 
 .row:nth-child(2) {
 
-background-color: #f8f8f8;
+background-color: $table-grey;
 
 }
 
@@ -116,15 +164,6 @@ background-color: #f8f8f8;
 
 /**********      Individual ELEMENTS Styling     ***********/
 
-/* 
-COLORS 
-  #50E3C2
-  #7EDDC8
-  #67BCE8 true blue
-  #FBC266
-  #FE8484
-  #FFA672 orange  
-  */
 
 
 
@@ -177,8 +216,33 @@ COLORS
 }
 
 
-.phaseline.line {
-    margin-top: -30px;
+
+.edit.line {
+    margin: 0;
+    font-size: 1.2em;
+}
+   
+.menubar {
+    height: 40px;
+    background-color: #43F4CD;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    .addbtn {
+	    color: #4fd7e4;
+	    font-size: 1.5em;
+	    background-color: #fff;
+	    width: 15px;
+	    height: 15px;
+	    border-radius: 50%;
+	    align-self: center;
+	    align-items: center;
+	    padding: 5px;
+	    justify-content: center;
+	    margin-right: 20px;
+	    box-shadow: 1px 2px 4px rgba(0,0,0,0.20);
+	}
 }
 
 .engagement-level {
@@ -308,6 +372,7 @@ li.row {
 
 .line.engage {
     order: 6;
+
 }
 
 

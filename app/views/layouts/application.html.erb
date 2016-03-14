@@ -16,11 +16,23 @@
 
     <body class="page-container-bg-solid page-boxed">
     <div class="big_container">
+             <div class="topbar">
+              <div class="logospace">
+                <%= link_to(image_tag('szlogo.png'), root_path, :class => "logo") %>
+              </div>
+             </div>
+              <div class="menubar">
+                <%=  link_to new_opportunity_path do %> 
+                  <div class="addbtn">+</div>
+                <% end %>
+              </div>
+              
    
 <!-- main container with all dynamic content -->
-<%= yield %>
-<%= render 'layouts/footer' %>
-</div>
+                <%= yield %>
+            
+    <%= render 'layouts/footer' %>
+    </div>
 
 </body>
 </html>
