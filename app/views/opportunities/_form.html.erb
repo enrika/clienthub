@@ -1,82 +1,112 @@
 
 
-<%= form_for(@opp) do |f| %>
+<%= form_for(@opp)  do |f| %>
+
+	<div class="form-container">
+		<div class="form-row">
+
+				<p>
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+				</p>
+
+				<p>
+				<%= f.label 'Owner' %>
+				<%= f.text_field :prospect_name %>
+				</p>
+
+				<p>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+				</p>
+
+				<p>
+				<%= f.label :amount %>
+				<%= f.select :amount,
+							 Opportunity::AMOUNT_OPTIONS,
+							 promt: "Pick one" %>
+				</p>
+
+				<p>
+				<%= f.label :phase %>
+				<%= f.select :phase,
+							 Opportunity::PHASE_OPTIONS,
+							 promt: "Pick one" %>
+				</p>
+
+				<p>
+				<%= f.label :engagement_level %>
+				<%= f.select :engagement_level, 
+							 Opportunity::ENGAGE_LEVELS,
+							  promt: "Pick one" %>
+				</p>
+
+
+				<p>
+				<%= f.label :phone %>
+				<%= f.text_field :phone %>
+				</p>
 
 
 
-<p>
-<%= f.label :name %>
-<%= f.text_field :name %>
-</p>
-
-<p>
-<%= f.label 'Owner' %>
-<%= f.text_field :prospect_name %>
-</p>
-
-<p>
-<%= f.label :email %>
-<%= f.text_field :email %>
-</p>
-
-<p>
-<%= f.label :amount %>
-<%= f.select :amount,
-			 Opportunity::AMOUNT_OPTIONS,
-			 promt: "Pick one" %>
-</p>
-
-<p>
-<%= f.label :phase %>
-<%= f.select :phase,
-			 Opportunity::PHASE_OPTIONS,
-			 promt: "Pick one" %>
-</p>
-
-<p>
-<%= f.label :engagement_level %>
-<%= f.select :engagement_level,
-			 Opportunity::ENGAGE_LEVELS,
-			 promt: "Pick one" %>
-</p>
-
-
-<p>
-<%= f.label :phone %>
-<%= f.text_field :phone %>
-</p>
+				<p>
+				<%= f.label "Image URL" %>
+				<%= f.text_field :image %>
+				</p>
 
 
 
-<p>
-<%= f.label "Image URL" %>
-<%= f.text_field :image %>
-</p>
+				<p>
+				<%= f.label :company %>
+				<%= f.text_field :company %>
+				</p>
+			
+			<div class="social-section">
+				<h2>Add Social Links</h2>
+				
+				<p>
+				<%= f.label :website %>
+				<%= f.text_field :website %>
+				</p>
+
+				<p>
+				<%= f.label :twitter %>
+				<%= f.text_field :twitter %>
+				</p>
+
+				<p>
+				<%= f.label :fb %>
+				<%= f.text_field :fb %>
+				</p>
+			</div>
+
+		</div>	
+
+		<div class="form-row">
+			<h2>Notes</h2>
+			<%= f.fields_for :notes do |note| %>
+
+					<p class="note note-info">
+					<%= note.label :date %>
+					<%= note.date_select(:date, :order =>[:month, :day, :year]) %>
+					</p>
+
+					<p>
+					<%= note.label :title %>
+					<%= note.text_field :title %>
+					</p>
 
 
+					<p>
+					<%=  note.text_area :description, placeholder: "Description" %>
+					<%= note.check_box :_destroy %>
+					<%= note.label :_destroy, "Delete" %>
+					</p>
+					
+			<% end %>
+		</div>
+		
+	</div>
 
-<p>
-<%= f.label :company %>
-<%= f.text_field :company %>
-</p>
-
-<h2>Add Social Links</h2>
-<p>
-<%= f.label :website %>
-<%= f.text_field :website %>
-</p>
-
-<p>
-<%= f.label :twitter %>
-<%= f.text_field :twitter %>
-</p>
-
-<p>
-<%= f.label :fb %>
-<%= f.text_field :fb %>
-</p>
-
-
-
-<%= f.submit %>
+	<%= f.submit %>
 <% end %>

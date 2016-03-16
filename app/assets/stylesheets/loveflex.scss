@@ -1,4 +1,70 @@
 
+/* Form styling */
+
+.note-info {
+	
+	span {
+   	font-size: .7em;
+    color: #FCCB8F;
+    font-weight: 400;
+    
+    padding: 2px;
+	}
+
+	h3 {
+	color: #FCCB8F;
+	font-size: .7em;
+	font-weight: 400;
+	}
+}
+
+
+
+p.date {
+    display: none;
+}
+
+textarea {
+    FONT-SIZE: .8em;
+    border: .5px solid #e8e9e9;
+    min-width: 250px;
+    min-height: 100px;
+}
+
+.select-style {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 90% 50%;
+}
+
+.select-style select {
+    font-size: 1.3em;
+    padding: 5px 8px;
+    width: 160%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+  
+}
+
+
+
+
+
 /* 
 COLORS 
   #50E3C2 greengreen
@@ -23,6 +89,10 @@ COLORS
   $sz-color-dark: #4fd7e4;
 
 
+/* The Love list Colors */
+$big-pink: #FF617E;
+$light-pink: #FFDEDE;
+
 
 
 /****************************************
@@ -45,7 +115,13 @@ body {
 	width: 100%;
 	min-height: 90px;
 	background-color: $brand-color1;
+	color: #fff;
+    font-size: .7em;
+	}
 
+
+	.szheart {
+	color: $faded-red;
 	}
 
 .line, 
@@ -54,7 +130,8 @@ li.row,
  .container,
  .column,
  .menubar,
- .addbtn
+ .addbtn,
+ .footer
 
 {
 	display: flex;
@@ -366,7 +443,13 @@ li.row {
 
 .line {
 	align-items: center;
+
 }
+
+.line.image{
+	 	margin-left: 25px;
+    	margin-right: 10px;
+	}
 
 
 

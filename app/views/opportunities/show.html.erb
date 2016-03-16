@@ -16,7 +16,7 @@
 		<div> 
 		<h3>Next Action:</h3> Call Peter Back 
 
-		<br/>(<%= link_to("View All", actions_path) %>)
+		<br/>
 		</div>
 
 
@@ -28,13 +28,27 @@
 
 
 		<h3> In <%= @opp.phase %> Phase - <%= @opp.engagement_level %></h3>
+		
+		<div class="note-info">
+			
+			<h2>Latest Notes<h2>
+			<% @notes.each do |note| %>
+				
 
-		<h2>Latest NOTES</h2>
-		<% @notes.each do |note| %>
-			<h3><%= note.title %></h3>
+					
+					<div class="note">
+					<%= link_to opportunity_note_url(@opp,note) do %>
+						<h3>"<%= note.title %>" - <span> <%= note.date %></span></h3>
+					<% end %>
+
+					</div>
+
+					
 			<% end %>
 
-		<div class="note note-info">                     
+		</div>
+
+		<div >                     
 		                            
 			<%= link_to('Edit', edit_opportunity_path) %>
 

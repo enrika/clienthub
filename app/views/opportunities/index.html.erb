@@ -36,9 +36,12 @@
 
 
 				<div class="column">
-					<div class="line">
+					<div class="line image">
 
-							<%= image_tag(opp.image, class: "profile_pic")%>
+							<%= link_to opp do %>
+								<%= image_tag(opp.image, class: "profile_pic")%>
+							<% end %>
+							
 							<!-- <img class= "profile_pic" src="../app/assets/images/profile_user.jpg"> -->   
 					</div>
 
@@ -48,7 +51,12 @@
 								<h3 class="name"><%= opp.prospect_name %></h3>
 								<h4 class="owner">Owner</h4>
 								<p class="phone"> 
-									661-999-9999 <a class= "mail" href ="mailto: yamamam@yamam.com"><i class="fa fa-envelope"></i></a>
+									<%= opp.phone %> 
+
+									<%= mail_to opp.email do %>
+										<i class="fa fa-envelope"></i>
+									<% end %>
+								
 								</p>
 								<div class="notes">
 								<a href="<%= opp.website %>"><i class="fa fa-rss-square"></i></a>

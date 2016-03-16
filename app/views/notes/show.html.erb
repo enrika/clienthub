@@ -1,9 +1,14 @@
+<div class= "container show">
 
 
+	<h2>Note Details:</h2>
+	<span>Written on: <%= @note.date %></span>
 
-Your NOTE:
+	<h2>"<%= @note.title %>"</h2> 
+	<%= @note.description %>
+	
 
-<h1><%= @note.title %></h1>
-<p><%= @note.description %></p>
+	<%= link_to "edit", edit_opportunity_note_path %>
 
-<%= link_to "edit", edit_opportunity_note_path %>
+
+</div>

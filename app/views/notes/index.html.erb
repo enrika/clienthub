@@ -1,19 +1,23 @@
-<h1>All Notes for <%= link_to(@opp.name, @opp) %></h1>
+<div class= "container stretch">
 
-<% @notes.each do |note| %>
-<div>
-<h3><%= note.title %></h3>
-<%= link_to("Details", opportunity_note_path(@opp, note)) %>
-<%= link_to("Edit", edit_opportunity_note_path(@opp, note)) %>
-<%= link_to "Delete", opportunity_note_path(@opp, note), method: :delete, data: {confirm: "Yo, ya sure?"}  %>
- <!-- Have to pass in to the parent object(@opp) as well as  the actual instance (note) that it's currently on via the loop -->
- <hr/>
 
-</div>
-<% end %>
 
-<p>
-<%= link_to("Add A Note", new_opportunity_note_path) %> </p>
+		<h1>All Notes for <%= link_to(@opp.name, @opp) %></h1>
+
+		<% @notes.each do |note| %>
+		<div>
+		<h3><%= note.title %></h3>
+		<%= link_to("Details", opportunity_note_path(@opp, note)) %>
+		<%= link_to("Edit", edit_opportunity_note_path(@opp, note)) %>
+		<%= link_to "Delete", opportunity_note_path(@opp, note), method: :delete, data: {confirm: "Yo, ya sure?"}  %>
+		 <!-- Have to pass in to the parent object(@opp) as well as  the actual instance (note) that it's currently on via the loop -->
+		 <hr/>
+
+		</div>
+		<% end %>
+
+		<p>
+		<%= link_to("Add A Note", new_opportunity_note_path) %> </p>
  
-
+</div>
 
