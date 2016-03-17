@@ -2,9 +2,10 @@
 
 
 	<h2>Note Details:</h2>
-	<span>Written on: <%= @note.date %></span>
+	<span>Written <%= time_ago_in_words(@note.date) %> ago, on <%= @note.date %></span>
 
 	<h2>"<%= @note.title %>"</h2> 
+
 	<%= @note.description %>
 	
 

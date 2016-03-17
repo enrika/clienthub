@@ -1,0 +1,23 @@
+<div class="form-row">
+			<h2>Notes</h2>
+			<%= f.fields_for :notes do |note| %>
+
+					<p class="note note-info">
+					<%= note.label :date %>
+					<%= note.date_select(:date, :order =>[:month, :day, :year]) %>
+					</p>
+
+					<p>
+					<%= note.label :title %>
+					<%= note.text_field :title %>
+					</p>
+
+
+					<p>
+					<%=  note.text_area :description, placeholder: "Description" %>
+					<%= note.check_box :_destroy %>
+					<%= note.label :_destroy, "Delete" %>
+					</p>
+					
+			<% end %>
+		</div>

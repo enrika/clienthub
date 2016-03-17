@@ -1,0 +1,15 @@
+
+
+<% if @opp.errors.any? %>
+	<div class="errors">
+		<h2>
+			Oops!
+		</h2>
+		<ul>
+			<% @opp.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+			<% end %>
+		</ul>
+	
+	</div>
+<% end %>

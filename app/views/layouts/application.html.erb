@@ -16,17 +16,24 @@
 
     <body class="page-container-bg-solid page-boxed">
     <div class="big_container">
-             <div class="topbar">
+          <div class="topbar">
               <div class="logospace">
                 <%= link_to(image_tag('szlogo.png'), root_path, :class => "logo") %>
               </div>
-             </div>
-              <div class="menubar">
+          </div>
+          <div class="menubar">
                 <%=  link_to new_opportunity_path do %> 
                   <div class="addbtn">+</div>
                 <% end %>
-              </div>
-              
+          </div>
+               
+                
+                  <% if flash[:notice] %>
+                    
+                                <p class="notice"> 
+                                    <%= flash[:notice] %>
+                                </p>
+                     <% end %>
    
 <!-- main container with all dynamic content -->
                 <%= yield %>

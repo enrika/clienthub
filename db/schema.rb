@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229081009) do
+ActiveRecord::Schema.define(version: 20160317015219) do
 
   create_table "actions", force: :cascade do |t|
     t.string   "name"
@@ -24,17 +24,6 @@ ActiveRecord::Schema.define(version: 20160229081009) do
   end
 
   add_index "actions", ["opportunity_id"], name: "index_actions_on_opportunity_id"
-
-  create_table "needs", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.string   "solution"
-    t.integer  "opportunity_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  add_index "needs", ["opportunity_id"], name: "index_needs_on_opportunity_id"
 
   create_table "notes", force: :cascade do |t|
     t.string   "title"
@@ -52,7 +41,6 @@ ActiveRecord::Schema.define(version: 20160229081009) do
     t.string   "twitter"
     t.string   "fb"
     t.string   "prospect_name"
-    t.string   "company"
     t.string   "phone"
     t.string   "email"
     t.string   "amount"
@@ -62,6 +50,8 @@ ActiveRecord::Schema.define(version: 20160229081009) do
     t.string   "phase"
     t.string   "engagement_level"
     t.string   "website"
+    t.boolean  "video"
+    t.boolean  "web"
   end
 
 end

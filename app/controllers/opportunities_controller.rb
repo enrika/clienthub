@@ -16,19 +16,25 @@ class OpportunitiesController < ApplicationController
 	def edit
 		@opp = Opportunity.find(params[:id])
 		@opp.notes.build
+		@notes = @opp.notes
 	end
 
 	
 	def update
 		@opp = Opportunity.find(params[:id])
-		@opp.update(opp_params)
-		redirect_to @opp
+		if @opp.update(opp_params)
+			redirect_to @opp, notice: ' Opportunity has been successfully updated.'
+		else
+			render :edit
+
+		end
 	end
 
 	
 	def new
 		@opp = Opportunity.new
 		@opp.notes.build
+		@notes = @opp.notes
 
 	end
 
@@ -40,7 +46,7 @@ class OpportunitiesController < ApplicationController
 		if @opp.save
 		redirect_to @opp, notice: "Opportunity was successfully created"
 		else
-			render "new"
+			render :new
 		end
 	end
 
@@ -57,7 +63,7 @@ class OpportunitiesController < ApplicationController
 
 		def opp_params 
 			params.require(:opportunity).
-			permit(:name, :twitter, :fb, :prospect_name, :phase, :engagement_level, :company, :phone, :email, :amount, :image, :website,  
+			permit(:name, :twitter, :fb, :prospect_name, :web, :video, :phase, :engagement_level, :phone, :email, :amount, :image, :website,  
 					notes_attributes:[:id, :title, :description, :date, :_destroy])
 		end
 

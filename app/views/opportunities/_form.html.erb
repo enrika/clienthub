@@ -1,5 +1,3 @@
-
-
 <%= form_for(@opp)  do |f| %>
 
 	<div class="form-container">
@@ -26,7 +24,12 @@
 							 Opportunity::AMOUNT_OPTIONS,
 							 promt: "Pick one" %>
 				</p>
-
+				<p>
+					<%= f.label :video %>
+					<%= f.check_box :video %>
+					<%= f.label :web %>
+					<%= f.check_box :web %>
+				</p>
 				<p>
 				<%= f.label :phase %>
 				<%= f.select :phase,
@@ -55,11 +58,6 @@
 				</p>
 
 
-
-				<p>
-				<%= f.label :company %>
-				<%= f.text_field :company %>
-				</p>
 			
 			<div class="social-section">
 				<h2>Add Social Links</h2>
@@ -82,31 +80,34 @@
 
 		</div>	
 
-		<div class="form-row">
-			<h2>Notes</h2>
-			<%= f.fields_for :notes do |note| %>
+			<% if current_page?(new_opportunity_path) %>
+					<div class="form-row">
+						<h2>Notes</h2>
+						<%= f.fields_for :notes do |note| %>
 
-					<p class="note note-info">
-					<%= note.label :date %>
-					<%= note.date_select(:date, :order =>[:month, :day, :year]) %>
-					</p>
+								<p class="note note-info">
+								<%= note.label :date %>
+								<%= note.date_select(:date, :order =>[:month, :day, :year]) %>
+								</p>
 
-					<p>
-					<%= note.label :title %>
-					<%= note.text_field :title %>
-					</p>
+								<p>
+								<%= note.label :title %>
+								<%= note.text_field :title %>
+								</p>
 
 
-					<p>
-					<%=  note.text_area :description, placeholder: "Description" %>
-					<%= note.check_box :_destroy %>
-					<%= note.label :_destroy, "Delete" %>
-					</p>
-					
+								<p>
+								<%=  note.text_area :description, placeholder: "Description" %>
+								<%= note.check_box :_destroy %>
+								<%= note.label :_destroy, "Delete" %>
+								</p>
+								
+						<% end %>
+					</div>
 			<% end %>
-		</div>
-		
 	</div>
 
 	<%= f.submit %>
 <% end %>
+		
+

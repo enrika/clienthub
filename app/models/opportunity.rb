@@ -6,7 +6,7 @@ accepts_nested_attributes_for :notes, reject_if: proc { |attributes| attributes[
 accepts_nested_attributes_for :actions 
 
 validates :name, presence: true
-validates_associated :notes, :actions
+validates_associated :notes, :actions, presence: true
 
 
 

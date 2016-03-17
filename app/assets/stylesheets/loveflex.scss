@@ -1,5 +1,67 @@
+/* 
+COLORS 
+  #50E3C2 greengreen
+  #67BCE8 true blue
+  #FBC266 faded orange
+  #FE8484 faded red
+  #FFA672 orange 
+  #4FD7E4 primary sz blue
+  #36d7b7 bright green
+
+  */
+
+  $brand-color1: #4FD7E4;
+  $brand-color2: #f1f1f1;
+  $primary-color: #36d7b7;
+  $main-plain: #e8e9e9;
+  $table-grey: #f8f8f8;
+  $faded-red: #FE8484;
+  $faded-orange: #FBC266;
+  $true-blue:  #67BCE8;
+  $text-color: #7C8A9B;
+  $light-text: lighten($text-color, 18%);
+  $sz-color-dark: #4fd7e4;
+
+
+
+
 
 /* Form styling */
+
+
+.line.image {
+    padding-right: 15px;
+}
+
+.notice {
+    background-color: #E8FFCF;
+    margin: 0;
+    text-align: center;
+}
+
+
+.errors {
+    background-color: $table-grey;
+    padding: 20px;
+    color: $faded-red;
+}
+
+.field_with_errors {
+    color: $faded-red;
+}
+
+
+.flash {
+	
+
+		.notice{
+			background-color: green;
+		}
+
+		.alert {
+
+		}
+}
 
 .note-info {
 	
@@ -65,28 +127,7 @@ textarea {
 
 
 
-/* 
-COLORS 
-  #50E3C2 greengreen
-  #67BCE8 true blue
-  #FBC266 faded orange
-  #FE8484 faded red
-  #FFA672 orange 
-  #4FD7E4 primary sz blue
-  #36d7b7 bright green
 
-  */
-
-  $brand-color1: #4FD7E4;
-  $brand-color2: #f1f1f1;
-  $primary-color: #36d7b7;
-  $main-neutral: #e8e9e9;
-  $table-grey: #f8f8f8;
-  $faded-red: #FE8484;
-  $faded-orange: #FBC266;
-  $true-blue:  #67BCE8;
-  $text-color: #7C8A9B;
-  $sz-color-dark: #4fd7e4;
 
 
 /* The Love list Colors */
@@ -105,7 +146,7 @@ body {
 	font-size: 1.25em;
 	font-family: 'Open Sans', sans-serif;
 	color: $text-color;
-	background: $main-neutral;
+	background: $main-plain;
 	padding-left: 5%;
 	padding-right: 5%;
 }
@@ -131,7 +172,8 @@ li.row,
  .column,
  .menubar,
  .addbtn,
- .footer
+ .footer,
+ .phaseline.line 
 
 {
 	display: flex;
@@ -231,6 +273,8 @@ background-color: $table-grey;
 
 }
 
+
+
 /**********      Column Styling     ***********/
 
 .column {
@@ -242,7 +286,10 @@ background-color: $table-grey;
 /**********      Individual ELEMENTS Styling     ***********/
 
 
-
+.service_type > icon {
+    padding: 15px 0 0 5px;
+    color: $light-text;
+}
 
 .phase {
 
@@ -253,6 +300,7 @@ background-color: $table-grey;
 	margin-top: 10px;
 	max-height: 17px;
 }
+
 
 .research {
 
@@ -362,7 +410,7 @@ i.fa.fa-rss-square {
 
 
 .info {
-color:rgba(124, 138, 155, 0.60);
+color: $light-text;
 font-size: .6em;
 font-weight: 200;
 }
@@ -430,7 +478,7 @@ font-size: .7em;
 
 /****************************************
 			
-			MOBILE STYLES
+			Desktop STYLES
 
 ****************************************/
 
@@ -456,6 +504,12 @@ li.row {
 .line.engage {
     order: 6;
 
+}
+
+.phaseline.line {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
 }
 
 
@@ -484,6 +538,13 @@ li.row {
 .notes {
  margin-bottom: 15px; 
 }
+
+.service_type > icon {
+    padding: 0 0 0 0;
+    
+    
+}
+
 }
   
 
