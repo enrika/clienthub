@@ -21,7 +21,7 @@ COLORS
   $text-color: #7C8A9B;
   $light-text: lighten($text-color, 18%);
   $sz-color-dark: #4fd7e4;
-
+  $shadow-color: rgba(119, 109, 109, 0.31);
 
 
 
@@ -207,7 +207,6 @@ a.logo img {
 	padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
-   	padding-top: 3%;
 
 			&.stretch{
 				padding: 0;
@@ -273,6 +272,10 @@ background-color: $table-grey;
 
 }
 
+.show.line.engage {
+    order: 0;
+    font-size: 1.3em;
+}
 
 
 /**********      Column Styling     ***********/
@@ -298,7 +301,7 @@ background-color: $table-grey;
 	color: #fff; 
 	font-size: .65em;
 	margin-top: 10px;
-	max-height: 17px;
+	
 }
 
 
@@ -474,6 +477,29 @@ font-size: .7em;
 
 .primary-challenge {
 	display: none;
+}
+
+
+/****************************************
+			Show Page
+
+****************************************/
+
+span.love-words {
+    font-size: .8em;
+    font-weight: 100;
+    font-family: 'caveat', cursive;
+    color: rgba(141, 128, 158, 0.52);
+}
+
+img.profile-pic.show {
+    @include shadow;
+}
+
+.line.phase.show {
+    margin-top: -30px;
+    margin-left: 15px;
+    font-size: 1.2em;
 }
 
 /****************************************

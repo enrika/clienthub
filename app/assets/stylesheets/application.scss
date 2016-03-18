@@ -13,10 +13,13 @@
 
  */
 @import "normalize";
+
  @import "http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all";
  @import "https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css";
+ @import "https://fonts.googleapis.com/css?family=Caveat";
  @import "font-awesome";
 
  @import "metronic/plugins/uniform/css/uniform.default.css";
+ @import "mixins.scss";
  @import "loveflex";
  @import "metronic/layouts/layout3/css/custom";
