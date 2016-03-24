@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 		  end
 		  
 		  def current_user
-		 		User.find_by(session[:user_id]) if session[:user_id]
+		 		User.find(session[:user_id]) if session[:user_id]
 		  end
 
 		  def require_correct_user
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
 
 		  def require_admin
 		  	unless current_user_admin?
-		  		redirect_to users_url, alert: "Unauthorized Access!"
+		  		redirect_to user_url(current_user.id), alert: "Unauthorized Access!"
 		  	end
 		  end
 

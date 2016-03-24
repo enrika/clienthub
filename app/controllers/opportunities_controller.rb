@@ -1,7 +1,7 @@
 class OpportunitiesController < ApplicationController
 	
-	# before_action :require_signin
-	# before_action :require_admin
+	before_action :require_signin
+	before_action :require_admin
 
 	def index #show an index of all in the db
 	@opps = Opportunity.all

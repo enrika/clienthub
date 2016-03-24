@@ -5,7 +5,7 @@ Rails.application.routes.draw do
  get 'signup', :to =>'users#new'
   
   resources :users
-  root "opportunities#index"
+  root "sessions#new"
   resources :opportunities do
   	resources :notes
   	resources :actions

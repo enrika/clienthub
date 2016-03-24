@@ -1,11 +1,12 @@
 
 
 <%= form_for (@user) do |f| %> 
-
-<p>
-	<%= f.label :admin  %>
-	<%= f.check_box :admin  %>
-</p>
+<% if current_user_admin? %>
+	<p>
+		<%= f.label :admin  %>
+		<%= f.check_box :admin  %>
+	</p>
+ <% end %>
 <p>
 	<%= f.label :name  %>
 	<%= f.text_field :name  %>
