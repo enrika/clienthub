@@ -12,10 +12,12 @@ COLORS
 
   $brand-color1: #4FD7E4;
   $brand-color2: #f1f1f1;
+  $brand-color3: #70E8CD;
   $primary-color: #36d7b7;
   $main-plain: #e8e9e9;
   $table-grey: #f8f8f8;
   $faded-red: #FE8484;
+  $faded-green: #36D7B7;
   $faded-orange: #FBC266;
   $true-blue:  #67BCE8;
   $text-color: #7C8A9B;
@@ -23,22 +25,17 @@ COLORS
   $sz-color-dark: #4fd7e4;
   $shadow-color: rgba(119, 109, 109, 0.31);
 
-
-
-
-/* Form styling */
-
-
-.line.image {
-    padding-right: 15px;
-}
+/* flash & Notice styles*/
 
 .notice {
     background-color: #E8FFCF;
     margin: 0;
     text-align: center;
+    padding: 10px;
 }
-
+.flash {
+    text-align: center;
+}
 
 .errors {
     background-color: $table-grey;
@@ -52,16 +49,70 @@ COLORS
 
 
 .flash {
-	
+  
 
-		.notice{
-			background-color: green;
-		}
+    .notice{
+      background-color: green;
+    }
 
-		.alert {
-
-		}
+    .alert {
+      background-color: $faded-red;
+    }
 }
+
+.flash.alert {
+    background-color: $faded-red;
+    padding: 10px;
+    color: #fff;
+}
+
+
+
+.flash.warning {
+  background-color: $faded-orange;
+    padding: 10px;
+    color: #fff;
+}
+
+.login.flashes {
+    text-align: center;
+    margin: auto;
+}
+
+
+/* flex containers */
+
+.line, 
+ul, 
+li.row,
+ .container,
+ .column,
+ .menubar,
+ .addbtn,
+ .footer,
+ .phaseline.line,
+ .logospace,
+ .topbar,
+ .logobox,
+ .loginbox,
+ .signin_form
+ p.login.submit
+
+{
+	display: flex;
+	
+}
+
+
+
+/* Form styling */
+
+
+.line.image {
+    padding-right: 15px;
+}
+
+
 
 .note-info {
 	
@@ -151,6 +202,12 @@ body {
 	padding-right: 5%;
 }
 
+body.login {
+  
+  background-color: $brand_color1;
+  padding: 0;
+}
+
 
 .footer {
 	width: 100%;
@@ -161,24 +218,112 @@ body {
 	}
 
 
+a.signin {
+    /* align-self: baseline; */
+    margin-left: auto;
+    padding-right: 35px;
+    color: #fff;
+    font-size: .9em;
+	}
+
+  .signinspace {
+    margin-left: auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+
+      .button{
+          font-size: .7em;
+      }
+}
+
+.loginbox {
+	
+	@include box_shadow;
+	
+	}
+
+	.loginbox {
+
+	    flex-direction: column;
+    	align-items: center;
+    	padding: 30px;
+    	margin-top: 70px;
+
+	}
+
+	.signin_form {
+	    
+	    flex-direction: column;
+	    max-width: 360px;
+	    margin: auto;
+}
+
+	div.loginbox img {
+    	width: 80px;
+}
+
+h2.login.title {
+    	font-size: 2.4em;
+    	font-weight: 800;
+    	color: $brand_color3;
+}
+
+h3.login.subtitle {
+    font-family: 'caveat', cursive;
+    margin-left: 50%;
+    margin-top: -20px;
+    font-size: 1.7em;
+    color: lighten($brand_color1, 20);
+}
+
+.login_field {
+    padding: 8px 20px;
+    border: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.20);
+}
+
+.login_field::-webkit-input-placeholder {
+   color: #B4C0C1;
+}
+
+.login_field:-moz-placeholder { /* Firefox 18- */
+   color: #B4C0C1;  
+}
+
+.login_field::-moz-placeholder {  /* Firefox 19+ */
+   color: #B4C0C1;  
+}
+
+.login_field:-ms-input-placeholder {  
+   color: #B4C0C1;  
+}
+
+	
+.login_field:focus::-webkit-input-placeholder {
+  		transition: opacity ease; 
+  		opacity: 0;
+}
+
+input.login_button {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    background-color: #FE8A8A;
+    border: 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+    
+
+
 	.szheart {
 	color: $faded-red;
 	}
 
-.line, 
-ul, 
-li.row,
- .container,
- .column,
- .menubar,
- .addbtn,
- .footer,
- .phaseline.line 
 
-{
-	display: flex;
-	
-}
 
 a.logo img {
     max-width: 80px;
@@ -196,6 +341,7 @@ a.logo img {
 .big_container {
     margin-top: 45px;
     margin-bottom: 45px;
+    background-color: #fff;
 }
 
 .container 
@@ -220,7 +366,6 @@ a.logo img {
 	flex-grow: 1;
 	color: #000;	
 	background-color: $sz-color-dark;
-	
 
 }
 

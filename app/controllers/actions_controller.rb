@@ -1,5 +1,8 @@
 class ActionsController < ApplicationController
 
+before_action :require_signin
+before_action :require_admin
+
 			def index #show an index of all in the db that belong to opp
 			@opp = Opportunity.find(params[:opportunity_id])
 			@actions = @opp.actions

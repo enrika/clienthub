@@ -1,0 +1,11 @@
+<div class="topbar">
+              <div class="logospace">
+                <%= link_to(image_tag('szlogo.png'), root_path, :class => "logo") %>
+              </div>
+              <%= link_to('Sign In', new_session_path, :class => "signin") %>
+  </div>
+  <div class="menubar">
+              <%=  link_to new_opportunity_path do %> 
+                <div class="addbtn">+</div>
+              <% end %>
+  </div>

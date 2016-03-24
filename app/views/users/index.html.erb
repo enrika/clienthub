@@ -1,0 +1,17 @@
+<div class= "container stretch">
+
+	<ul>
+
+		<% @users.each do |user| %>
+			<li class="row">
+				 
+				<h1>
+				<%= link_to(user.name, user) %>  
+				</h1>
+				
+				
+			</li>
+		<% end %>
+
+	</ul>
+</div>

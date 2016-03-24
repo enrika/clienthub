@@ -1,15 +1,16 @@
 
 
-<% if @opp.errors.any? %>
-	<div class="errors">
-		<h2>
-			Oops!
-		</h2>
-		<ul>
-			<% @opp.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
-	
-	</div>
+<% if object.errors.any? %>
+<section id="errors">
+  <header>
+    <h2>
+      Oops! Looks like you messed up hommie... 
+    </h2>
+  </header>
+  <ul>
+    <% object.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</section>
 <% end %>

@@ -1,4 +1,7 @@
 class OpportunitiesController < ApplicationController
+	
+	before_action :require_signin
+	before_action :require_admin
 
 	def index #show an index of all in the db
 	@opps = Opportunity.all
@@ -54,7 +57,7 @@ class OpportunitiesController < ApplicationController
 		@opp = Opportunity.find(params[:id])
 		@opp.destroy
 
-		redirect_to opportunities_url
+		redirect_to opportunities_url, alert: "Opportunity has been deleted"
 	end
 
 

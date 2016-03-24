@@ -1,0 +1,27 @@
+
+<div class= "signin_form">
+
+<div class="loginbox">
+	
+	<div><%= image_tag("szlogo_blue.png") %></div>
+	<h2 class="login title">Client Hub</h2>
+	<h3 class="login subtitle">Login</h3>
+
+	<%= form_tag(session_path) do %>
+		<p>
+		<%= email_field_tag :email, nil, class: "login_field", placeholder: "email" %>
+		</p>
+		
+		<p>
+		<%= password_field_tag :password, nil, class: "login_field", placeholder: "password" %>
+		</p>
+
+		<p class="login submit">
+			<%= submit_tag "Sign In", class:"login_button" %>
+		</p>
+
+	<% end %>
+
+</div>
+
+</div>
