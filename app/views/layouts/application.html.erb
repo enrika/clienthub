@@ -7,10 +7,12 @@
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="storysitez client projects" />
         <meta content="" name="Enrika Greathouse" />
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+          <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+          <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+          <%= csrf_meta_tags %>
 </head>
+
+
 <link rel="shortcut icon" href="favicon.ico" /> </head>
     <!-- END HEAD -->
 
@@ -30,9 +32,9 @@
               </div>
           </div>
           <div class="menubar">
-                <%=  link_to new_opportunity_path do %> 
-                  <div class="addbtn">+</div>
-                <% end %>
+                
+                <%=   add_new_button  %> 
+                 
           </div>
                 <div class="wrapper">
                   <%= render 'layouts/flashes' %>

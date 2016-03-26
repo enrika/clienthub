@@ -11,6 +11,7 @@ class OpportunitiesController < ApplicationController
 	def show #details view
 		@opp = Opportunity.find(params[:id])
 		@notes = @opp.notes.limit(3)
+		@actions = @opp.actions.limit(3)
 	
 		
 	end

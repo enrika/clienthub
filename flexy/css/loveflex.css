@@ -25,7 +25,11 @@ li.row,
 	
 }
 
-
+h2 span.edit {
+    font-size: .5em;
+    margin-left: 5px;
+    color: orange;
+}
 
 
 /**********   CONTAINERS  ***********/

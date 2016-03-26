@@ -1,0 +1,18 @@
+<div class= "container show">
+
+<h2><%= @actionstuff.name %></h2>
+<span> Completed? <%= check_box_tag 'completed', '1', @actionstuff.completed %></span>
+<p>Due Date: <%= @actionstuff.due_date %></p>
+
+<div>                     
+		                            
+			
+			<%= link_to "edit", edit_opportunity_action_path %>
+
+			<%= link_to "Delete", opportunity_action_path, method: :delete, data: {confirm: "Hey ya sure you want to do this?!"} %>
+
+			<%= link_to('View All', opportunity_actions_path(@opp)) %>
+		</div>
+
+
+</div>

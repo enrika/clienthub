@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324202009) do
+ActiveRecord::Schema.define(version: 20160326094503) do
 
   create_table "actions", force: :cascade do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160324202009) do
     t.integer  "opportunity_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "action_type"
   end
 
   add_index "actions", ["opportunity_id"], name: "index_actions_on_opportunity_id"
@@ -44,23 +45,32 @@ ActiveRecord::Schema.define(version: 20160324202009) do
     t.string   "phone"
     t.string   "email"
     t.string   "amount"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "image"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.string   "phase"
     t.string   "engagement_level"
     t.string   "website"
     t.boolean  "video"
     t.boolean  "web"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.text     "need"
+    t.boolean  "need_confirmed"
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
-    t.boolean  "admin",           default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.boolean  "admin",               default: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end

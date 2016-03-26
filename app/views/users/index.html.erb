@@ -3,11 +3,12 @@
 	<ul>
 
 		<% @users.each do |user| %>
-			<li class="row">
-				 
-				<h1>
-				<%= link_to(user.name, user) %>  
-				</h1>
+			<li class="row line">
+					 <div class="avatar thumb">
+					 <%= link_to(image_tag(user.avatar.url(:thumb)), user) %>					 </div>
+				<h2>
+				<%= link_to(user.name.split.first, user) %>  
+				</h2>
 				
 				
 			</li>

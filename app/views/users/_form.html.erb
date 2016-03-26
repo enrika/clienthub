@@ -1,7 +1,12 @@
 
 
-<%= form_for (@user) do |f| %> 
+<%= form_for @user, html: { multipart: true } do |f| %> 
 <% if current_user_admin? %>
+	
+<p>
+	<%= f.file_field :avatar %>
+</p>
+
 	<p>
 		<%= f.label :admin  %>
 		<%= f.check_box :admin  %>

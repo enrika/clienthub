@@ -1,0 +1,32 @@
+
+
+<!-- why as foo... because rails uses action in the params as the actual action(ie new, show etc) in control so it was @action was giving me a string instead of the object.... in the future try not to name my models with anything rails uses by convention... took me at least 2+hrs for me to figure this out -->
+<%= form_for [@opp, @actionstuff], as: :foo do |f| %>
+<p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label "Action Type" %>
+<%= f.select :action_type,
+			Action::ACTION_TYPE_OPTIONS %>
+</p>
+
+<p>
+<%= f.label :due_date %> <br/>
+<%= f.date_select(:due_date, :order =>[:month, :day, :year]) %>
+</p>
+
+<p>
+
+<%= f.label :next %>
+<%= f.check_box :next %>
+</p>
+<p>
+<%= f.label "complete" %>
+<%= f.check_box :completed %>
+</p>
+
+<%= f.submit %>
+	<% end %>

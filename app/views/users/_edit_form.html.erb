@@ -1,0 +1,36 @@
+
+
+<%= form_for @user, url: user_path, html: { multipart: true } do |f| %> 
+<% if current_user_admin? %>
+	
+<p>
+	<%= f.file_field :avatar %>
+</p>
+
+	<p>
+		<%= f.label :admin  %>
+		<%= f.check_box :admin  %>
+	</p>
+ <% end %>
+<p>
+	<%= f.label :name  %>
+	<%= f.text_field :name  %>
+</p>
+<p>
+	<%= f.label :email  %>
+	<%= f.email_field :email %>
+
+</p>
+<p>
+	<%= f.label :password  %>
+	<%= f.password_field :password  %>
+</p>
+<p>
+	<%= f.label :password_confirmation, "Confirm Password"  %>
+	<%= f.password_field :password_confirmation  %>
+</p>
+
+	<%= f.submit %>
+
+<% end %>
+

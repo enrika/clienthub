@@ -8,8 +8,9 @@
 
 	<h2>"<%= @note.title %>"</h2> 
 
-	<%= @note.description %>
-	
+	 <p>
+	 <%= hyperlink(@note.description) %>
+	</p>
 
 	<%= link_to "edit", edit_opportunity_note_path %>
 

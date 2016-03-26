@@ -7,12 +7,13 @@
 	<%@opps.each do |opp| %>
 		
 
+<!-- rows hold each opportunity, and allows zebra like tables -->
 
-			<li class="row">
+			<li class="row"> 
 				
-				
+		<!-- lines hold each content row -->		
 				<div class="line engage">
-					<%= link_to edit_opportunity_path(opp) do %>
+					<%= link_to new_opportunity_note_path(opp) do %>
 	  					<div class="edit line"> <i class="icon-note icons"></i></div>
 					<% end %>
 					
@@ -53,7 +54,7 @@
 					<div class="line image">
 
 							<%= link_to opp do %>
-								<%= image_tag(opp.image, class: "profile_pic")%>
+								<%= image_tag(opp.image.url(:thumb), class: "profile_pic")%>
 							<% end %>
 							
 							<!-- <img class= "profile_pic" src="../app/assets/images/profile_user.jpg"> -->   
@@ -61,7 +62,7 @@
 
 					<div class="line">
 						<div class= "info item">
-								<h2 class="company"><%= link_to(opp.name.titleize, opp) %></h2>
+								<h2 class="company"><%= link_to(opp.name.titleize, opp) %><span class="edit"><%= link_to("edit", edit_opportunity_path(opp)) %></span></h2>
 								
 								<h3 class="name"><%= opp.prospect_name %></h3>
 								<h4 class="owner">Owner</h4>

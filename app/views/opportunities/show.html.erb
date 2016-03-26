@@ -18,7 +18,7 @@
 
 		<div class="show line avatar">
 			<div class="img-holder-show">
-				<%= image_tag(@opp.image, class:"profile-pic show", size: "300x300")%>
+				<%= image_tag(@opp.image.url(:medium), class:"profile-pic show", size: "300x300")%>
 			</div>
 		</div>
 
@@ -32,6 +32,19 @@
 					<div class="note">
 					<%= link_to opportunity_note_url(@opp,note) do %>
 						<h3>"<%= note.title %>" - <span> <%= note.date %></span></h3>
+					<% end %>
+
+					</div>
+
+					
+			<% end %>
+
+			<h2>Actions<h2>
+			<% @actions.each do |action| %>
+					
+					<div class="note">
+					<%= link_to opportunity_action_url(@opp, action) do %>
+						<h3>"<%= action.name %>" - <span> <%= action.due_date %></span></h3>
 					<% end %>
 
 					</div>

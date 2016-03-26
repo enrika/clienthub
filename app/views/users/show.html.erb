@@ -1,8 +1,15 @@
 <div class= "container show">
 
-<%= @user.name %>
-<%= @user.email  %>
 
-<%= link_to "Delete Account", user_path(@user), method: :delete, data: {confirm: "Hey ya sure you want to do this my friend?!"} %>
+<div class="avatar show">
+<%= image_tag @user.avatar.url(:medium) %>
+</div>
+<div class="profile_info">
+<h3><%= @user.name %></h3>
+<%= @user.email  %>
+</div>
+
+
+<%= link_to "Delete Account", user_path(@user), method: :delete, class: "button", data: {confirm: "Hey ya sure you want to do this my friend?!"} %>
 
 </div>

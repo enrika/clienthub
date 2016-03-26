@@ -1,8 +1,12 @@
-<%= form_for(@opp)  do |f| %>
+<%= form_for @opp,   html: { multipart: true } do |f| %>
 <%= render 'shared/errors', object: @opp %>
 
 	<div class="form-container">
 		<div class="form-row">
+
+				<p>
+				<%= f.file_field :image %>
+				</p>
 
 				<p>
 				<%= f.label :name %>
@@ -17,6 +21,12 @@
 				<p>
 				<%= f.label :email %>
 				<%= f.text_field :email %>
+				</p>
+				<p>
+				<%= f.label :need %>
+				<%= f.text_area :need %>
+				<%= f.label "Need Confirmed?" %>
+				<%= f.check_box :need_confirmed %>
 				</p>
 
 				<p>
@@ -49,13 +59,6 @@
 				<p>
 				<%= f.label :phone %>
 				<%= f.text_field :phone %>
-				</p>
-
-
-
-				<p>
-				<%= f.label "Image URL" %>
-				<%= f.text_field :image %>
 				</p>
 
 
