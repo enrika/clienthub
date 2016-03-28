@@ -2,6 +2,7 @@
 
 <h2><%= @actionstuff.name %></h2>
 <span> Completed? <%= check_box_tag 'completed', '1', @actionstuff.completed %></span>
+<span> Next? <%= check_box_tag 'next', '1', @actionstuff.next %></span>
 <p>Due Date: <%= @actionstuff.due_date %></p>
 
 <div>                     

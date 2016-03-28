@@ -1,4 +1,6 @@
 <div class= "container new">
+<h1>New Action for <%= @opp.name %></h1>
+<%= image_tag(@opp.image.url(:thumb), class:"profile-pic show", size: "100x100")%>
 
 <%= render 'form' %>
 

@@ -5,13 +5,16 @@ class OpportunitiesController < ApplicationController
 
 	def index #show an index of all in the db
 	@opps = Opportunity.all
+
 	end
 
 	
 	def show #details view
 		@opp = Opportunity.find(params[:id])
 		@notes = @opp.notes.limit(3)
-		@actions = @opp.actions.limit(3)
+		@actions = @opp.actions
+		@upcoming = @actions.upcoming
+		@next = @actions.next
 	
 		
 	end

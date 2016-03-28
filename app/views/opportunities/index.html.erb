@@ -87,20 +87,43 @@
 				</div>
 			
 				<div class="line">	
-					<div class= "action">
-						<p class= "next-action">
-							<span class="highlighter">Next Action: </span>Next Action goes here
-						</p>
-						<div class="line action-date">
-							03/16/16
-						</div>
+				<!-- first ck to see if there are any actions (actions are not nil) -->
+				<% if opp.actions.empty? %>
+					<%= link_to(new_opportunity_action_path (opp)) do %>
+						<p>Please add an action</p>
+					<% end %>
+				<% else %>
+				<!-- then ck to see if there are any actions marked as next (actions.next are not nil) -->
 
-						<p class = "primary-challenge">
-							<span class="highlighter">Confirmed: </span><%= truncate("They need a website that allows customers to order online, plus share testimonials", length: 37, separator: ' ') %>
-						</p>
+				
+					
+					<% if opp.actions.next.empty? %>
+					<% opp.actions.set_next_action(opp) %>
+				 	<% end %>
+				
+								<!-- Now build out the style and display for the next action -->
+								<% opp.actions.next.each do |nextup| %>
+								<!-- convert date to date circle with only month abbr. & day -->
+									<%= link_to(opportunity_actions_path (opp)) do	 %>
+										<div>
+											<div class="col center action-date">
+											<span class="month"><%= nextup.due_date.strftime('%^b') %></span>
+											<span class="day"><%= nextup.due_date.strftime('%d') %></span>
+											</div>
+										</div>
+									<div class= "action">
+										<p class= "next-action col">
+											<span class="highlighter">Next Action:</span> 
+												
+														<%= nextup.name %>
+										</p>
+										<% end %>
+										
+								<% end %>
+
+					
+				<% end %>
 						
-
-			
 			</li>
 
 	<% end %>

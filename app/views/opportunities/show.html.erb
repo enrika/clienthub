@@ -26,6 +26,24 @@
 		
 		<div class="note-info">
 			
+			<h2>Next Action<h2>
+			<% @next.each do |action| %>
+					
+					<div class="note">
+					<%= link_to opportunity_action_path(@opp, action) do %>
+						<h3>"<%= action.name %>" - <span> <%= action.due_date %></span></h3>
+						
+						<% end %>
+
+					</div>
+
+					
+			<% end %>
+
+
+
+
+
 			<h2>Latest Notes<h2>
 			<% @notes.each do |note| %>
 					
@@ -39,18 +57,14 @@
 					
 			<% end %>
 
-			<h2>Actions<h2>
-			<% @actions.each do |action| %>
-					
-					<div class="note">
-					<%= link_to opportunity_action_url(@opp, action) do %>
-						<h3>"<%= action.name %>" - <span> <%= action.due_date %></span></h3>
-					<% end %>
 
-					</div>
+			
 
-					
-			<% end %>
+			
+
+
+
+
 
 		</div>
 

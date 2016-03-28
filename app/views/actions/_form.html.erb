@@ -3,7 +3,7 @@
 <!-- why as foo... because rails uses action in the params as the actual action(ie new, show etc) in control so it was @action was giving me a string instead of the object.... in the future try not to name my models with anything rails uses by convention... took me at least 2+hrs for me to figure this out -->
 <%= form_for [@opp, @actionstuff], as: :foo do |f| %>
 <p>
-<%= f.label :name %>
+<%= f.label "Action to take" %>
 <%= f.text_field :name %>
 </p>
 
