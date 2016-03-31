@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  research_plan_id: 
+  name: MyString
+  url: MyString
+  tool_type: MyString
+  desc: MyText
+
+two:
+  research_plan_id: 
+  name: MyString
+  url: MyString
+  tool_type: MyString
+  desc: MyText

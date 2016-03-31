@@ -1,0 +1,2 @@
+module ContentReportsHelper
+end

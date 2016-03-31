@@ -1,0 +1,2 @@
+class SubsciptionPlansController < ApplicationController
+end

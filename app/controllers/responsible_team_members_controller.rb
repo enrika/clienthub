@@ -1,0 +1,2 @@
+class ResponsibleTeamMembersController < ApplicationController
+end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marketing_plan_id: 
+  name: MyString
+  strategy: MyText
+  goal: MyText
+  metrics: MyText
+  links: MyText
+  priority: 1
+
+two:
+  marketing_plan_id: 
+  name: MyString
+  strategy: MyText
+  goal: MyText
+  metrics: MyText
+  links: MyText
+  priority: 1

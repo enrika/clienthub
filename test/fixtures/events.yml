@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  name: MyString
+  date: 2016-03-29
+  time: 2016-03-29 06:14:10
+  event_type: MyString
+  purpose: MyString
+
+two:
+  project_id: 
+  name: MyString
+  date: 2016-03-29
+  time: 2016-03-29 06:14:10
+  event_type: MyString
+  purpose: MyString

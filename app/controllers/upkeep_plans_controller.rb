@@ -1,0 +1,2 @@
+class UpkeepPlansController < ApplicationController
+end

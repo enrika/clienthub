@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: 
+  channel: MyString
+  shares: 1
+  comments: 1
+  likes: 1
+  followers: 1
+  friends: 1
+
+two:
+  report_id: 
+  channel: MyString
+  shares: 1
+  comments: 1
+  likes: 1
+  followers: 1
+  friends: 1

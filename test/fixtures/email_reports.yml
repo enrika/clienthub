@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: 
+  open_rate: 9.99
+  subscribers: 1
+  unsubscribes: 1
+  emails_sent: 1
+
+two:
+  report_id: 
+  open_rate: 9.99
+  subscribers: 1
+  unsubscribes: 1
+  emails_sent: 1

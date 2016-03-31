@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  problem: MyText
+  solution: MyText
+  narative: MyText
+  sex: MyString
+  brand_story_id: 
+
+two:
+  age: 1
+  problem: MyText
+  solution: MyText
+  narative: MyText
+  sex: MyString
+  brand_story_id: 

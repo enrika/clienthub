@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report: 
+  content_type: MyString
+  total_comments: 1
+  total_shares: 1
+  total_likes: 1
+  coaching_insights: MyText
+  total_downloads: 1
+  notes: MyText
+
+two:
+  report: 
+  content_type: MyString
+  total_comments: 1
+  total_shares: 1
+  total_likes: 1
+  coaching_insights: MyText
+  total_downloads: 1
+  notes: MyText

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  media_plan_id: 
+  name: MyString
+  link: MyString
+  street_address: MyText
+  city: MyString
+  state: MyString
+  zip: MyString
+  long: MyString
+  lat: MyString
+
+two:
+  media_plan_id: 
+  name: MyString
+  link: MyString
+  street_address: MyText
+  city: MyString
+  state: MyString
+  zip: MyString
+  long: MyString
+  lat: MyString

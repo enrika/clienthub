@@ -1,0 +1,2 @@
+class BrandStoriesController < ApplicationController
+end

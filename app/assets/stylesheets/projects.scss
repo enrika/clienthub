@@ -1,0 +1,67 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+	
+
+	.progress.outer {
+	
+    background-color: whitesmoke;
+    margin: 12px;
+    max-width: 150px;
+
+}
+
+
+.project.phase {
+	
+	min-width: 150px;
+	text-align: center;
+}
+
+.project.row {
+	padding: 20px;
+}
+
+
+.progress_container {
+width: 200px;
+
+}
+
+.progress {
+overflow: 25px;
+background-color: rgba(227, 227, 227, 0.52);
+
+}
+
+.progress .bar {
+width: 10%;
+height: 30px; 
+background-color: #A7EBF2;
+color: rgba(124, 138, 155, 0.42);
+}
+
+span.progress_percent {
+    font-size: .9em;
+    margin: 5px;
+}
+
+.line.split {
+	justify-content: space-around;
+    margin-top: 10px;
+}
+
+.line.project.name {
+    width: 200px;
+    font-size: 1em;
+
+
+}
+
+
+.days_left.line {
+	max-width: 150px;
+}
+
+

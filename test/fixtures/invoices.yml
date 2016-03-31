@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  desc: MyText
+  due_date: 2016-03-29
+  status: MyString
+
+two:
+  project_id: 
+  desc: MyText
+  due_date: 2016-03-29
+  status: MyString

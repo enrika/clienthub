@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  start_date: 2016-03-28
+  projected_end_date: 2016-03-28
+  actual_end_date: 2016-03-28
+  name: MyString
+  objective: MyText
+  timeline: 1
+
+two:
+  user_id: 
+  start_date: 2016-03-28
+  projected_end_date: 2016-03-28
+  actual_end_date: 2016-03-28
+  name: MyString
+  objective: MyText
+  timeline: 1

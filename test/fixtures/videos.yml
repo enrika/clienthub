@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  video_type: MyString
+  embed_code: MyString
+  url: MyString
+  desc: MyText
+  title: MyString
+
+two:
+  project_id: 
+  video_type: MyString
+  embed_code: MyString
+  url: MyString
+  desc: MyText
+  title: MyString

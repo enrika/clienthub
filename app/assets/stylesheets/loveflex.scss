@@ -89,6 +89,7 @@ li.row,
  .container,
  .column,
  .menubar,
+ .admin_navbar,
  .addbtn,
  .footer,
  .phaseline.line,
@@ -100,6 +101,7 @@ li.row,
  p.login.submit,
  .line.action-date,
  .col,
+
 
 
 
@@ -540,6 +542,39 @@ background-color: $table-grey;
 	}
 }
 
+.admin_navbar {
+  
+   
+
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    padding-top: 20px;
+    border-bottom: 2px solid rgba(237, 237, 237, 0.37);
+
+}
+
+.navcon {
+  
+      font-size: 1.8em;
+    color: #fff;
+    background-color: rgba(163, 160, 157, 0.26);
+    width: 65px;
+    text-align: center;
+    padding: 15px;
+    margin: 3px;
+}
+
+h2.page_title {
+    margin-right: auto;
+    #margin-left: 50px;
+    #font-size: 1.4em;
+    #color: #E7D4D4;
+    margin-left: 25px;
+    font-size: 1.7em;
+    color: #FCCB8F;
+}
+
 .engagement-level {
 
 	font-family: 'simple-line-icons';
@@ -584,7 +619,7 @@ i.fa.fa-rss-square {
     font-size: .6em;
     font-weight: 200;
     width: 240px;
-}
+}p
 
 .company {
 	font-family: 'Open Sans', sans-serif;

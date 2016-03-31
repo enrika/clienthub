@@ -1,0 +1,69 @@
+<div class= "container stretch">
+
+<ul>
+			
+
+	<%@projects.each do |project| %>
+		
+
+<!-- rows hold each opportunity, and allows zebra like tables -->
+
+			<li class="project row"> 
+				
+		<!-- lines hold each content row -->	
+				<div class="line project name " >	
+				<h2><%= link_to(project.name, project) %><span class="edit"><%= link_to("edit", edit_project_path(project)) %></span></h2>
+				</div> 
+
+				<div class="line">
+					<div class="progress_container ">	
+						<div class=" progress ">
+							<div class="bar"><span class="progress_percent">10%</span></div>
+						</div>
+					</div>
+				</div> 
+
+
+				
+				
+
+				
+
+				
+
+				<div class="line">
+
+					 <div class= "project phase research " > 
+					 
+					 RESEARCH PHASE
+						
+					 </div>		
+					
+				</div>
+
+				<div class="days_left line">	
+				<%= get_days_left(project) %>
+				</div>
+
+
+
+
+				<div>	
+
+						<div>
+							<div class="col center action-date">
+							<span class="month"><%= project.projected_end_date.strftime('%^b') %></span>
+							<span class="day"><%= project.projected_end_date.strftime('%d') %></span>
+							</div>
+						</div>
+
+				</div>
+
+
+						
+			</li>
+
+	<% end %>
+</ul>
+
+</div>

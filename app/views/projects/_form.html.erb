@@ -1,0 +1,74 @@
+<%= form_for @project  do |f| %>
+<%= render 'shared/errors', object: @project %>
+
+	<div class="form-container">
+		<div class="form-row">
+
+				
+
+				<p>
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+				</p>
+				<span>
+				<%= f.label :objective %>
+				</span>
+				<p>
+				<%= f.text_area :objective %>
+				</p>
+
+				<p>
+				<%= f.label :timeline %>
+				<%= f.select :timeline,
+				Project::TIMELINE_OPTIONS,
+							 promt: "Pick one" 
+
+				 %>
+				</p>
+
+				<p>
+				<%= f.label :status %>
+				<%= f.select :status,
+				Project::STATUS_OPTIONS,
+							 promt: "Pick one"
+
+
+				%>
+				</p>
+				<p>
+				<%= f.label "Current Phase" %>
+				<%= f.select :status,
+				Project::PHASE_OPTIONS,
+							 promt: "Pick one"
+
+
+				%>
+				</p>
+
+				<p>
+				<%= f.label :start_date %>
+				<%= f.date_select :start_date, :order =>[:month, :day, :year] %>
+				</p>
+
+
+				
+				
+				
+</div>
+</div>
+
+<%= f.submit %>
+<% unless current_page?(controller: 'projects', action: 'new') %>
+
+		<%= link_to(project_path(@project), method: :delete, data: {confirm: "ya sure you want to delete this project...there's no turning back!!"}) do  %>
+				<i class="fa fa-trash-o"></i>
+				<% end %>
+<% end %>
+
+</form>
+</div>
+				
+
+	
+<% end %>
+		

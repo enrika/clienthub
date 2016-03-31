@@ -1,0 +1,2 @@
+class SocialMediaReportsController < ApplicationController
+end

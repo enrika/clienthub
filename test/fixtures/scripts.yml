@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  media_plan_id: 
+  title: MyString
+  treatment: MyText
+  intro: MyText
+  call2action: MyText
+  objective: MyText
+  characters: MyText
+  script: MyText
+
+two:
+  media_plan_id: 
+  title: MyString
+  treatment: MyText
+  intro: MyText
+  call2action: MyText
+  objective: MyText
+  characters: MyText
+  script: MyText

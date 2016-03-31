@@ -1,0 +1,2 @@
+module TypeFacesHelper
+end

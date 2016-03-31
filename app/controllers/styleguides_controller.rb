@@ -1,0 +1,2 @@
+class StyleguidesController < ApplicationController
+end

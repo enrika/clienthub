@@ -1,0 +1,2 @@
+class ContentReportsController < ApplicationController
+end

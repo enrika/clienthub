@@ -1,0 +1,2 @@
+class ShotlistsController < ApplicationController
+end

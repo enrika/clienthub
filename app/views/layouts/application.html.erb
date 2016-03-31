@@ -36,6 +36,44 @@
                 <%=   add_new_button  %> 
                  
           </div>
+          <div class="admin_navbar">
+
+          <h2 class="page_title"><%= get_controller_link %>
+          </h2>
+                
+                <%= link_to(opportunities_path) do %>
+                <i class="navcon fa fa-gittip"></i>
+                <% end %>
+
+                <%= link_to(proposals_path) do %>
+                <i class="navcon fa fa-list"></i>
+                <% end %>
+
+                <%= link_to(invoices_path) do %>
+                <i class="navcon fa fa-usd"></i>
+                <% end %>
+
+                <%= link_to(projects_path) do %>
+                <i class="navcon fa fa-calendar"></i>
+                <% end %>
+
+                <%= link_to(users_path) do %>
+                <i class="navcon fa fa-user"></i>
+                <% end %>
+
+               
+
+                
+
+                
+
+                
+
+
+
+
+                 
+          </div>
                 <div class="wrapper">
                   <%= render 'layouts/flashes' %>
    

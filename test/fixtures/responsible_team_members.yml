@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  upkeep_plan_id: 
+  name: MyString
+  phone: MyString
+  email: MyString
+  member_type: MyString
+  responsible_for: MyString
+  desc: MyText
+
+two:
+  upkeep_plan_id: 
+  name: MyString
+  phone: MyString
+  email: MyString
+  member_type: MyString
+  responsible_for: MyString
+  desc: MyText

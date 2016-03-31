@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report_id: 
+  incoming_traffic: 1
+  bounce_rate: 9.99
+  full_report_link: MyString
+  coaching_insights: MyText
+  notes: MyText
+
+two:
+  report_id: 
+  incoming_traffic: 1
+  bounce_rate: 9.99
+  full_report_link: MyString
+  coaching_insights: MyText
+  notes: MyText

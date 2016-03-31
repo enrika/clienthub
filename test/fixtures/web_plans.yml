@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  colors: MyText
+  moodboard: MyString
+  style_guide: MyString
+  themes: MyText
+  chosen_theme: MyString
+  desc: MyText
+
+two:
+  project_id: 
+  colors: MyText
+  moodboard: MyString
+  style_guide: MyString
+  themes: MyText
+  chosen_theme: MyString
+  desc: MyText

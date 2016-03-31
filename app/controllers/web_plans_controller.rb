@@ -1,0 +1,2 @@
+class WebPlansController < ApplicationController
+end

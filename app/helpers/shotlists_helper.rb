@@ -1,0 +1,2 @@
+module ShotlistsHelper
+end

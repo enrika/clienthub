@@ -1,0 +1,2 @@
+class MediaPlansController < ApplicationController
+end

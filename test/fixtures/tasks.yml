@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phase_id: 
+  name: MyString
+  hours: 1
+  mins: 1
+  time_spent: 1
+
+two:
+  phase_id: 
+  name: MyString
+  hours: 1
+  mins: 1
+  time_spent: 1

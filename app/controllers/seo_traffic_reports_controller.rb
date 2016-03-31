@@ -1,0 +1,2 @@
+class SeoTrafficReportsController < ApplicationController
+end

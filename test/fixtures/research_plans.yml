@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  keywords: MyText
+  strategy: MyText
+  user_strategy: MyText
+  market_strategy: MyText
+
+two:
+  project_id: 
+  keywords: MyText
+  strategy: MyText
+  user_strategy: MyText
+  market_strategy: MyText

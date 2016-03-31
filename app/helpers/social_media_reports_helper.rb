@@ -1,0 +1,2 @@
+module SocialMediaReportsHelper
+end

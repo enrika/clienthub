@@ -1,0 +1,2 @@
+class PreProjectAssessmentsController < ApplicationController
+end

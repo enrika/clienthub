@@ -1,0 +1,2 @@
+module BrandStoriesHelper
+end

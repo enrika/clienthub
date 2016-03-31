@@ -13,6 +13,13 @@ module ApplicationHelper
 
 	end
 
+	def get_controller_link
+		controllername = controller.controller_name
+		filter = "All "
+		link_to(filter + controllername.titleize, :controller => controllername, :action => :index)
+		
+	end
+
 
 	 def hyperlink(text)
     	return text.gsub(/((http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(([0-9]{1,5})?\/.*)?)/, '<a target="blank" href=\'\1\'>\1</a>').html_safe

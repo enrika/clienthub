@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 
+  dna: MyText
+  audience_desc: MyText
+  brand_msg: MyText
+
+two:
+  project_id: 
+  dna: MyText
+  audience_desc: MyText
+  brand_msg: MyText
