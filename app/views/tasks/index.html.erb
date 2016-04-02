@@ -1,0 +1,54 @@
+<div class= "container ">
+
+
+		
+
+		<div><h2>Task's for <%= @project.name %></h2></div>
+
+<br/>
+		<div>
+			<h3>Overall Project Progress</h3>	
+					<div class="progress_container ">	
+						<div class=" progress ">
+							<div class="bar"><span class="progress_percent">10%</span></div>
+						</div>
+					</div>	
+		</div>
+
+		
+
+<br/>
+
+		<div>
+			<ul>
+			
+					<% @phase_titles.each do |title| %> 
+							<% @sorted_tasks = @tasks.get_sorted_tasks(@tasks, title) %>
+							
+						<% unless @sorted_tasks.empty? %>
+									
+									<h2><%= title %> Phase</h2><br/>
+							
+							<% @sorted_tasks.each do |s_task| %>
+									<li>
+										<h4><%= s_task.name %></h4>
+										<%= link_to("Details", project_task_path(@project, s_task)) %>
+										<%= link_to("Edit", edit_project_task_path(@project, s_task)) %>
+										<%= link_to "Delete", project_task_path(@project, s_task), method: :delete, data: {confirm: "Yo, ya sure?"}  %>
+				 						<hr/>
+				 					</li>
+							<% end %><br/>
+
+						<% end %>
+					<% end %>
+
+			</ul>
+			
+		</div>
+		
+
+		
+
+		<p> <%= link_to("Add A task", new_project_task_path) %> </p>
+ 
+</div>

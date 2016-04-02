@@ -45,7 +45,7 @@ before_action :require_admin, except: [:show]
 		@project.save
 
 		if @project.save
-		create_default_tasks()	
+		# create_default_tasks(@project)	
 		set_end_date(@project)
 		redirect_to @project, notice: "project was successfully created"
 		else
@@ -66,19 +66,26 @@ before_action :require_admin, except: [:show]
 
 		def project_params 
 			params.require(:project).
-			permit(:start_date, :projected_end_date, :actual_end_date, :name, :objective, :timeline, :status)   
+			permit(:start_date, :phase, :projected_end_date, :actual_end_date, :name, :objective, :timeline, :status,
+					tasks_attributes:[:id, :name, :due_date, :_destroy])   
 					
 		end
 
 	
 
-		def set_end_date(project)
+	def set_end_date(project)
 		@days = project.timeline
 
 		@newdate = project.start_date + @days.days
 		project.update(projected_end_date: @newdate)
 
 		
+	end
+
+	def create_clarify_tasks(project, tasks)
+			Project.task.create([{ name: 'Welcome Letter', points: '2' }, { name: 'Project Assessment', points: '3' }]) do |p|
+  			p.project.task_type = "clarify"
+			end
 	end
 
 

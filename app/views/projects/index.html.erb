@@ -28,18 +28,20 @@
 				
 
 				
-
-				
-
 				<div class="line">
+	 				<%= link_to(project_tasks_path(project)) do %>
 
-					 <div class= "project phase research " > 
-					 
-					 RESEARCH PHASE
+							 <div class= "project phase research " > 
+								<%=  project.phase %>
+							 </div>		
 						
-					 </div>		
-					
+					<% end %>
 				</div>
+
+
+
+
+
 
 				<div class="days_left line">	
 				<%= get_days_left(project) %>

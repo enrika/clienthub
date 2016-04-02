@@ -1,0 +1,57 @@
+
+
+
+<%= form_for([@project, @task]) do |f|%>
+<p>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</p>
+
+<p>
+<%= f.label "For what phase?" %>
+<%= f.select :task_type,
+Project::PHASE_OPTIONS,
+			 promt: "Pick one"
+
+
+%>
+</p>
+
+<p>
+<%= f.label "Effort Points (1-8)" %>
+<%= f.text_field :points, size: 2 %>
+</p>
+
+<p>
+<%= f.label :task_notes %><br/>
+<%= f.text_area :task_notes %>
+</p>
+
+<p>
+<%= f.label :status %><br/>
+<%= f.select :status, 
+Task::STATUS_OPTIONS,
+			promt: "pick one"
+
+%>
+</p>
+
+<h2>Log Any Time Spent On Task</h2>
+<p>
+<%= f.label :hours %> <br/>
+<%= f.text_field :hours, size: 10 %>
+</p>
+
+<p>
+<%= f.label :mins %> <br/>
+<%= f.text_field :mins, size: 10 %>
+</p>
+
+
+<p>
+<%= f.label "Add a hard due date if any" %>
+<%= f.date_field(:due_date, :order =>[:month, :day, :year]) %>
+</p>
+
+<%= f.submit %>
+	<% end %>

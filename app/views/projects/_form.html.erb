@@ -37,7 +37,7 @@
 				</p>
 				<p>
 				<%= f.label "Current Phase" %>
-				<%= f.select :status,
+				<%= f.select :phase,
 				Project::PHASE_OPTIONS,
 							 promt: "Pick one"
 
@@ -45,12 +45,18 @@
 				%>
 				</p>
 
+				
 				<p>
 				<%= f.label :start_date %>
-				<%= f.date_select :start_date, :order =>[:month, :day, :year] %>
+				<%= f.date_field :start_date, :order =>[:month, :day, :year] %>
 				</p>
+				
+				<% unless @project.nil? || @project.projected_end_date.nil? %>
 
+				 	<h3> Current End Date: <%= @project.projected_end_date %></h3>
 
+				 <% end %>
+				
 				
 				
 				

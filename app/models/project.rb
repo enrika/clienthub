@@ -1,8 +1,8 @@
 class Project < ActiveRecord::Base
   belongs_to :user
+  has_many :tasks, dependent: :destroy
   
-
-
+  
 
 STATUS_OPTIONS = [
 
@@ -26,11 +26,10 @@ TIMELINE_OPTIONS = [
 
   PHASE_OPTIONS = [
 
-  	'Research',
-  	'Clarity',
-  	'Design',
+  	'Pre-Project',
+  	'Clarify',
+  	'Strategize',
   	'Build',
-  	'Launch',
   	'Cultivate'
   ]
 
