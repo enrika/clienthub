@@ -4,7 +4,9 @@
 			
 
 	<%@projects.each do |project| %>
-		
+	<% @tasks = project.tasks %>
+	<% @progress = project.tasks.get_project_progress(@tasks) %>	
+	
 
 <!-- rows hold each opportunity, and allows zebra like tables -->
 
@@ -16,11 +18,8 @@
 				</div> 
 
 				<div class="line">
-					<div class="progress_container ">	
-						<div class=" progress ">
-							<div class="bar"><span class="progress_percent">10%</span></div>
-						</div>
-					</div>
+
+					<%= render "shared/make_progress_bar" %>
 				</div> 
 
 

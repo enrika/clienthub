@@ -1,0 +1,9 @@
+<div class="progress_container ">	
+	<div class=" progress ">
+		<div class="bar" style="width: <%= @progress %>%;">
+			<span class="progress_percent">
+				<%= number_to_percentage(@progress, precision: 0) %>
+			</span>
+		</div>
+	</div>
+</div>

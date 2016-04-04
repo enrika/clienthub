@@ -53,5 +53,10 @@ Task::STATUS_OPTIONS,
 <%= f.date_field(:due_date, :order =>[:month, :day, :year]) %>
 </p>
 
+<p>
+<%= f.label :completed %>
+<%= f.check_box :completed, size: 2 %>
+</p>
+
 <%= f.submit %>
 	<% end %>

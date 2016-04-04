@@ -8,9 +8,8 @@ before_action :require_admin, except: [:show]
 	@project = Project.find(params[:project_id])
 	@tasks = @project.tasks
 	@phase_titles = Project::PHASE_OPTIONS 
-
-	
-
+	@completed = @project.tasks(:completed => true)
+	@progress = @tasks.get_project_progress(@tasks) 
 
 	end
 
@@ -18,6 +17,7 @@ before_action :require_admin, except: [:show]
 	def show #details view
 		@project = Project.find(params[:project_id])
 	    @task = @project.tasks.find(params[:id])
+
 	end
 
 	
