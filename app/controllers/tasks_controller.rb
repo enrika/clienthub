@@ -16,7 +16,7 @@ before_action :require_admin, except: [:show]
 	
 	def show #details view
 		@project = Project.find(params[:project_id])
-	    @task = @project.tasks.find(params[:id])
+	    @tasks = @project.tasks.find(params[:id])
 
 	end
 

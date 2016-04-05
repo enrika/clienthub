@@ -1,4 +1,11 @@
-
+.plan-container {
+    display: flex;
+    width: 150px;
+    font-size: 5em;
+    padding: 45px;
+    background-color: #e8e9e9;
+    justify-content: center;
+}
 /****************************************
 			
 			BASE STYLES

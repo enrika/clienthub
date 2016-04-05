@@ -1,3 +1,5 @@
+
+
 /* 
 COLORS 
   #50E3C2 greengreen
@@ -102,11 +104,32 @@ li.row,
  .line.action-date,
  .col,
 
-
-
-
 {
-	display: flex;
+	
+.plan-box {
+    display: flex;
+    width: 150px;
+    font-size: 1em;
+    padding: 45px;
+    background-color: #e8e9e9;
+    justify-content: center;
+    margin: 5px;
+
+ }
+
+.plan-container.line {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+ .plan-box i {
+    font-size: 3em;
+  }
+
+
+  display: flex;
 	
 }
 

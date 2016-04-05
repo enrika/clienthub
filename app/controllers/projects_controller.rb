@@ -12,7 +12,10 @@ before_action :require_admin, except: [:show]
 	
 	def show #details view
 		@project = Project.find(params[:id])
-		
+		@tasks = @project.tasks
+		@phase_titles = Project::PHASE_OPTIONS 
+		@completed = @project.tasks(:completed => true)
+		@progress = @tasks.get_project_progress(@tasks) 
 	end
 
 	
