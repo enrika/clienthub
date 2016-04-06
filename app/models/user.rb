@@ -8,7 +8,7 @@ validates :email, presence: true,
 					uniqueness: { case_sensitive: false }
 
 
- has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png",
+ has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
                 
   
   # for local testing
