@@ -1,5 +1,8 @@
 class ChangeTimelineToIntegerInProjects < ActiveRecord::Migration
   def change
-    change_column :projects, :timeline, :integer
+    
+    ALTER TABLE :projects ALTER COLUMN :timeline TYPE integer USING (timeline::integer);
   end
+
+ 
 end
