@@ -10,9 +10,11 @@ validates :email, presence: true,
 
  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png",
                 
-  :storage => :s3,
-  :s3_region => 'us-east-1',
-                    :s3_credentials => "config/.paperpaper.yml"
+  
+  # for local testing
+  # :storage => :s3,
+  # :s3_region => 'us-east-1',
+  #                   :s3_credentials => "config/.paperpaper.yml"
 
 
 

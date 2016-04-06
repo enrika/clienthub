@@ -61,7 +61,6 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
-    envyable (1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     font-awesome-rails (4.5.0.1)
@@ -168,15 +167,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (~> 2.2, >= 2.2.30)
+  aws-sdk
   bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.1.0)
-  envyable
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 5.0.0.beta1)
+  paperclip
   pg
   rails (= 4.2.5.1)
   sass-rails (~> 5.0)
