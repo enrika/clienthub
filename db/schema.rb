@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401203647) do
+ActiveRecord::Schema.define(version: 20160405015951) do
 
   create_table "actions", force: :cascade do |t|
     t.string   "name"
@@ -308,12 +308,12 @@ ActiveRecord::Schema.define(version: 20160401203647) do
     t.date     "actual_end_date"
     t.string   "name"
     t.text     "objective"
-    t.integer  "timeline"
     t.integer  "project_progress"
     t.string   "status"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.string   "phase"
+    t.integer  "timeline"
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
@@ -536,12 +536,12 @@ ActiveRecord::Schema.define(version: 20160401203647) do
     t.string   "type_face_type"
     t.string   "type_face_link"
     t.text     "type_face_tags"
-    t.integer  "styleguides_id"
+    t.integer  "styleguide_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
-  add_index "type_faces", ["styleguides_id"], name: "index_type_faces_on_styleguides_id"
+  add_index "type_faces", ["styleguide_id"], name: "index_type_faces_on_styleguide_id"
 
   create_table "upkeep_plans", force: :cascade do |t|
     t.integer  "project_id"
