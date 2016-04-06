@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-# before_action :require_signin
-# before_action :require_admin, except: [:show, :edit, :update]
-# before_action :require_correct_user, only: [:edit, :update, :destroy]
+before_action :require_signin
+before_action :require_admin, except: [:show, :edit, :update]
+before_action :require_correct_user, only: [:edit, :update, :destroy]
 
 
 	def index
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 	end
 
 	def update
+		@user = User.find(params[:id])
 		if @user.update(user_params)
 			redirect_to @user, notice: 'User Account has been successfully updated'
 		else
