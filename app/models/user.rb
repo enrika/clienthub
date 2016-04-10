@@ -8,13 +8,13 @@ validates :email, presence: true,
 					uniqueness: { case_sensitive: false }
 
 
- has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
+ has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" },
                 
   
-  # for local testing
-  # :storage => :s3,
-  # :s3_region => 'us-east-1',
-  #                   :s3_credentials => "config/.paperpaper.yml"
+ 
+  :storage => :s3,
+  :s3_region => 'us-east-1',
+                    :s3_credentials => "config/.paperpaper.yml"
 
 
 

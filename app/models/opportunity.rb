@@ -8,9 +8,13 @@ accepts_nested_attributes_for :actions, reject_if: proc { |attributes| attribute
 validates :name, presence: true
 validates_associated :notes, :actions, presence: true
 
-has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png",
 
+ :storage => :s3,
+  :s3_region => 'us-east-1',
+                    :s3_credentials => "config/.paperpaper.yml"
+
+validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 
 AMOUNT_OPTIONS = [

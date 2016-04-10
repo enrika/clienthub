@@ -5,7 +5,7 @@ ruby '2.3.0'
 gem 'rails', '4.2.5.1'
 
 gem 'aws-sdk', '~> 2'
-gem 'paperclip'
+gem "paperclip", "~> 5.0.0.beta1"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

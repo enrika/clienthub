@@ -174,7 +174,7 @@ DEPENDENCIES
   font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip
+  paperclip (~> 5.0.0.beta1)
   pg
   rails (= 4.2.5.1)
   sass-rails (~> 5.0)
