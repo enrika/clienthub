@@ -14,7 +14,7 @@ validates :email, presence: true,
  
   :storage => :s3,
   :s3_region => 'us-east-1',
-                    :s3_credentials => "config/.paperpaper.yml"
+                    :s3_credentials => "config/paperpaper.yml"
 
 
 

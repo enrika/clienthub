@@ -12,7 +12,7 @@ has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, def
 
  :storage => :s3,
   :s3_region => 'us-east-1',
-                    :s3_credentials => "config/.paperpaper.yml"
+                    :s3_credentials => "config/paperpaper.yml"
 
 validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
